@@ -1,0 +1,9 @@
+[Unit]
+Description=bitlbee
+
+[Service]
+ExecStartPre=-/usr/bin/docker kill bitlbee
+ExecStartPre=-/usr/bin/docker rm bitlbee
+ExecStartPre=/usr/bin/docker pull hackedu/bitlbee
+ExecStart=/usr/bin/docker run --rm --name bitlbee -p 6667:6667 hackedu/bitlbee
+ExecStop=/usr/bin/docker stop bitlbee

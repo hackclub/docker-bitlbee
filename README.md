@@ -4,7 +4,6 @@
 
 The following issue need to be addressed before this is ready for production:
 
-* No SSL support
 * All storage currently happens within the running container.
 
 ---
